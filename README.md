@@ -66,7 +66,8 @@ Link do repositório do projeto: [link_do_repositorio](https://github.com/joaozi
 ## Resultados
  Os resultados dos classificadores estão armazenados na pasta results.
 ***
-![Descrição da Imagem](results/orb-run_all_classifiers-24062024-2146.png)
-![Descrição da Imagem](results/orb-rf_classifier-24062024-2146.png)
-![Descrição da Imagem](results/orb-svm_classifier-24062024-2146.png)
-![Descrição da Imagem](results/orb-mlp_classifier-24062024-2146.png)
+Accuracy | Random Forest (RF)
+--- | ---
+![Descrição da Imagem](results/orb-run_all_classifiers-24062024-2146.png) | ![Descrição da Imagem](results/orb-rf_classifier-24062024-2146.png)
+Support Vector Machine (SVM) | Multilayer Perceptron (MLP)
+![Descrição da Imagem](results/orb-svm_classifier-24062024-2146.png)|![Descrição da Imagem](results/orb-mlp_classifier-24062024-2146.png)
