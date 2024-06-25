@@ -36,7 +36,7 @@ Link do repositório do projeto: [link_do_repositorio](https://github.com/joaozi
 ## Instruções de Uso
 1. **Clone o repositório**:
    ```bash
-   git clone https://github.com/seu_usuario/seu_projeto.git
+   git clone https://github.com/joaozin046/Trabalho_Final_Processamento_de_imagens.git
    cd seu_projeto
    
 2. **Instale as dependências**:
