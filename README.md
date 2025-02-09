@@ -2,8 +2,7 @@
 
 ## Equipe
 - 2319195   [João Pedro Flausino de Lima](https://github.com/joaozin046)
-- 2411342   [Arthur Henrique Abrantes Hassimyan](https://github.com/ArthurHassimyan)
-
+  
 ## Descrição dos Descritores Implementados
 ### ORB Feature Extraction
 O descritor `orb_FeatureExtraction.py` extrai características das imagens usando o algoritmo ORB (Oriented FAST and Rotated BRIEF), que é utilizado para detectar e descrever pontos chave em imagens de forma eficiente.    
