@@ -1,9 +1,10 @@
 # Projeto de Classificação de Imagens
-
-## Equipe
-- 2319195   [João Pedro Flausino de Lima](https://github.com/joaozin046)
   
-## Descrição dos Descritores Implementados
+## Dataset utilizado
+[Covid-19 Image Dataset](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset/code)
+
+
+## Descrição dos descritores implementados
 ### ORB Feature Extraction
 O descritor `orb_FeatureExtraction.py` extrai características das imagens usando o algoritmo ORB (Oriented FAST and Rotated BRIEF), que é utilizado para detectar e descrever pontos chave em imagens de forma eficiente.    
 1.**Detecção de Pontos Chave com FAST:**
@@ -36,18 +37,25 @@ Link do repositório do projeto: [link_do_repositorio](https://github.com/joaozi
 1. **Clone o repositório**:
    ```bash
    git clone https://github.com/joaozin046/Trabalho_Final_Processamento_de_imagens.git
-   cd seu_projeto
+   cd Trabalho_Final_Processamento_de_imagens
    
-2. **Instale as dependências**:
-   ```python
-    pip install -r requirements.txt
+2. **instale o poetry**:
+   ```bash
+   pip install poetry
+3. **Instale as dependências**:
+   ```bash
+   poetry install
+   
+4. **Entre no virtualEnv**:
+   ```bash
+    poetry shell
   
-3. **Execute o extrator de características**:
-   ```python
+5. **Execute o extrator de características**:
+   ```bash
    python featureExtractors/orb_FeatureExtraction.py
   
   
-4.**Execute os classificadores**:
+6.**Execute os classificadores**:
 
 - **MLP Classifier**:
    ```python
