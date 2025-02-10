@@ -1,7 +1,7 @@
 # Projeto de Classificação de Imagens
   
-## Dataset utilizado
-[Covid-19 Image Dataset](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset/code)
+
+Link do dataset do projeto: [Covid-19 Image Dataset](https://www.kaggle.com/datasets/pranavraikokte/covid19-image-dataset/code)
 
 
 ## Descrição dos descritores implementados
@@ -19,8 +19,6 @@ O descritor `orb_FeatureExtraction.py` extrai características das imagens usand
 - O resultado dessas comparações é uma sequência de bits (0s e 1s) que descreve a área ao redor do ponto chave.
 - O ORB ajusta o BRIEF para que ele funcione bem mesmo se a imagem estiver rotacionada. Ele faz isso calculando o ângulo do ponto chave e girando a área ao redor desse ponto antes de aplicar o BRIEF.
 
-
-Link do repositório do projeto: [link_do_repositorio](https://github.com/joaozin046/Trabalho_Final_Processamento_de_imagens.git)
 
 ## Classificador e Acurácia
 ### Classificadores Utilizados
