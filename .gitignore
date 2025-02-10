@@ -1,0 +1,7 @@
+classifiers/__pycache__
+/images_split
+.pytest_cache
+poetry.lock
+/results
+/featureExtractors/__pycache__
+/__pycache__

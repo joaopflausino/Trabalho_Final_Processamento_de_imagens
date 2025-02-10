@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "trabalho-final-processamento-de-imagens"
+version = "0.1.0"
+description = ""
+authors = ["João Pedro Flausino <joaoxpp2001@hotmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+matplotlib = "^3.10.0"
+scikit-learn = "^1.6.1"
+progress = "^1.6"
+opencv-python = "^4.11.0.86"
+split-folders = "^0.5.1"
+pytest = "^8.3.4"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

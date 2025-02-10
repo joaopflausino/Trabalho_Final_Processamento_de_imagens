@@ -49,7 +49,7 @@ def getData(path):
         return None
     
     for dirpath, dirnames, filenames in os.walk(path):
-        if len(filenames) > 0:  # it's inside a folder with files
+        if len(filenames) > 0:
             folder_name = os.path.basename(dirpath)
             bar = Bar(f'[INFO] Getting images and labels from {folder_name}', max=len(filenames), suffix='%(index)d/%(max)d Duration:%(elapsed)ds')
             for index, file in enumerate(filenames):
@@ -75,7 +75,7 @@ def extractOrbDescriptors(images):
     bar = Bar('[INFO] Extracting ORB descriptors...', max=len(images), suffix='%(index)d/%(max)d  Duration:%(elapsed)ds')
     orb = cv2.ORB_create()
     for image in images:
-        if len(image.shape) > 2:  # color image
+        if len(image.shape) > 2:
             image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
         keypoints, descriptors = orb.detectAndCompute(image, None)
         if descriptors is not None:
@@ -85,14 +85,23 @@ def extractOrbDescriptors(images):
     return np.array(orbDescriptorsList, dtype=object)
 
 def trainKMeans(orbDescriptors):
+    import time
+    import numpy as np
+    from sklearn.cluster import MiniBatchKMeans
+
     print('[INFO] Clustering the ORB descriptors of all train images...')
-    k = 100  # number of clusters for KMeans
+    k = 100
+    all_descriptors = np.vstack(orbDescriptors)
+    if all_descriptors.shape[0] < k:
+        print(f'[WARNING] Número de amostras ({all_descriptors.shape[0]}) menor que k ({k}). Ajustando k para {all_descriptors.shape[0]}.')
+        k = all_descriptors.shape[0]
     kmeans = MiniBatchKMeans(n_clusters=k, n_init='auto', random_state=42)
     startTime = time.time()
-    kmeans.fit(np.vstack(orbDescriptors))
+    kmeans.fit(all_descriptors)
     elapsedTime = round(time.time() - startTime, 2)
     print(f'[INFO] Clustering done in {elapsedTime}s')
     return kmeans, k
+
 
 def buildHistogram(orbDescriptors, kmeans_model, n_clusters):
     print('[INFO] Building histograms...')

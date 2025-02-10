@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import os, time
 from datetime import datetime
-import mlp_classifier, rf_classifier, svm_classifier
+from . import mlp_classifier, rf_classifier, svm_classifier
 
 def main():
     mainStartTime = time.time()
@@ -21,6 +21,7 @@ def main():
     print(f'[INFO] featureName: {featureName}')
     print(f'[INFO] Total code execution time: {elapsedTime}s')
     plotResults(modelNames, results, featureName)
+    return results
 
 def plotResults(modelNames, results, featureName):
     fig, ax = plt.subplots()
